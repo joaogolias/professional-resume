@@ -1,7 +1,14 @@
 {
   "en": {
     "translation": {
-      "initial-greeting": "Hello, I am João Golias!"
+      "texts": {
+        "initial-greeting": "Hello, I am João Golias!"
+      },
+      "labels": {
+        "about-me": "about me",
+        "projects": "projects",
+        "contact": "contact"
+      }
     }
   }
 }
