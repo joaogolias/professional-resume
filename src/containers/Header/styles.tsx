@@ -12,7 +12,7 @@ export const Header = styled.div`
   right: 0;
 `;
 
-export const MyName = styled.div`
+export const MyName = styled.p`
   font-weight: bold;
   color: #ffffff;
 `;
