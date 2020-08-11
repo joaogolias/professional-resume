@@ -7,6 +7,7 @@ function App() {
       <S.IntroductionContainer />
       <S.KnowledgeContainer />
       <S.JobExperienceContainer />
+      <S.ProjectsContainer />
       {
         // Voluntariado
         // Projetos
