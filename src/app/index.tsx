@@ -7,9 +7,6 @@ function App() {
       <S.IntroductionContainer />
       <S.KnowledgeContainer />
       {
-        // Sobre mim - cv em pdf
-        // Meus conhecimentos
-        // Educação
         // Experiência
         // Voluntariado
         // Projetos

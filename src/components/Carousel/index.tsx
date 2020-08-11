@@ -2,6 +2,7 @@ import React, { useState, FunctionComponent } from "react";
 import { IconContext } from "react-icons";
 import * as S from "./styled";
 
+//ToDo: fix typings
 const createPages = (itemsPerPage: number, content: React.ReactNode): any => {
   const pages: any = {};
   let currentPage = 0;
@@ -18,14 +19,37 @@ const createPages = (itemsPerPage: number, content: React.ReactNode): any => {
   });
   return pages;
 };
+
 export const Carousel: FunctionComponent<CarouselProps> = (props) => {
-  const itemsPerPage = window.innerWidth > 600 ? 3 : 1;
+  const [currentPage, setCurrentPage] = useState(0);
+  const [fade, setFade] = useState(true);
+  const [clientCurrentX, setClientCurrentX] = useState(0);
+  const [deltaX, setDeltaX] = useState(0);
+
+  //ToDo: Isolate values: 600, 3 and 1
+  const isMobile = () => window.innerWidth <= 600;
+  const itemsPerPage = !isMobile()
+    ? props.itemsPerPageDesktop || 3
+    : props.itemsPerPageMobile || 1;
+
   const totalPages = Math.ceil(
     React.Children.count(props.children) / itemsPerPage
   );
   const pages = createPages(itemsPerPage, props.children);
-  const [currentPage, setCurrentPage] = useState(0);
-  const [fade, setFade] = useState(true);
+
+  const onTouchMove = (clientX: number) => {
+    setDeltaX(clientX - clientCurrentX);
+    setClientCurrentX(clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (deltaX > 0) {
+      changeSlide(-1);
+    } else if (deltaX < 0) {
+      changeSlide(1);
+    }
+    setDeltaX(0);
+  };
 
   const changeSlide = (value: number) => {
     setFade(true);
@@ -62,7 +86,16 @@ export const Carousel: FunctionComponent<CarouselProps> = (props) => {
 
   return (
     <S.Carousel className={props.className}>
-      <S.ContentAndButtons>
+      <S.ContentAndButtons
+        onTouchMove={
+          isMobile()
+            ? (touchMoveEvent) => {
+                onTouchMove(touchMoveEvent.targetTouches[0].clientX);
+              }
+            : undefined
+        }
+        onTouchEnd={isMobile() ? onTouchEnd : undefined}
+      >
         {createContentArray()}
         <IconContext.Provider value={{ size: "30px" }}>
           <S.NextSlide
@@ -90,6 +123,8 @@ export const Carousel: FunctionComponent<CarouselProps> = (props) => {
 
 interface CarouselProps {
   className?: string;
+  itemsPerPageDesktop?: number;
+  itemsPerPageMobile?: number;
 }
 
 export default Carousel;

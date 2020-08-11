@@ -14,21 +14,7 @@ export const Knowledge = ({ className }: KnowledgeProps) => {
         <Text size={"large"}>Meus Conhecimentos</Text>{" "}
       </S.Title>
       <S.KnowledgeCarousel>
-        {[
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-        ].map((i) => (
+        {["1", "2", "3", "4", "5"].map((i) => (
           <S.KnowledgeItem>{i}</S.KnowledgeItem>
         ))}
       </S.KnowledgeCarousel>

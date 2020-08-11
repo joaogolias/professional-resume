@@ -22,13 +22,17 @@ const Introduction = ({ className }: IntroductionProps) => {
           <S.Resume>
             <Text size={"small"}>{t("initial-greeting")}</Text>
           </S.Resume>
-          <S.Skills>
+          {/* <S.Skills>
             {skills.map((item) => (
               <Text size="small" showBar>
                 {item}
               </Text>
             ))}
-          </S.Skills>
+
+          </S.Skills> */}
+          {
+            //Todo: Add education information
+          }
         </S.Content>
       </S.Description>
       <S.Description />
