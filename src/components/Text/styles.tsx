@@ -1,26 +1,54 @@
 import styled from "styled-components";
 
-export const LargestText = styled.p`
-  font-size: 38pt;
+interface Props {
+  bold?: boolean;
+  italic?: boolean;
+  size: "largest" | "large" | "medium" | "small";
+  textAlign?: string;
+}
+
+export const Text = styled.p<Props>`
+  font-weight: ${(props) => props.bold && "bolder"};
+  font-style: ${(props) => props.italic && "italic"};
+  word-break: keep-all;
+  text-align: ${(props) => props.textAlign || "justify"};
+  font-size: ${(props) => {
+    switch (props.size) {
+      case "largest":
+        return "38pt";
+      case "large":
+        return "18pt";
+      case "medium":
+        return "12pt";
+      case "small":
+        return "9pt";
+      default:
+        return "9pt";
+    }
+  }};
   @media (max-width: 600px) {
-    font-size: 24pt;
+    font-size: ${(props) => {
+      switch (props.size) {
+        case "largest":
+          return "24pt";
+        case "large":
+          return "16pt";
+        case "medium":
+          return "10pt";
+        case "small":
+          return "9pt";
+        default:
+          return "9pt";
+      }
+    }};
   }
 `;
 
-export const LargeText = styled.p`
-  font-size: 18pt;
-  @media (max-width: 600px) {
-    font-size: 16pt;
-  }
+export const Bar = styled.div`
+  width: 3px;
+  margin-right: 5px;
+  background-color: white;
 `;
-
-export const MediumText = styled.p`
-  font-size: 12pt;
-  @media (max-width: 600px) {
-    font-size: 10pt;
-  }
-`;
-
-export const SmallText = styled.p`
-  font-size: 9pt;
+export const Content = styled.div`
+  display: flex;
 `;

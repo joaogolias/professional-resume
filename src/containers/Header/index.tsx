@@ -2,7 +2,11 @@ import React, { ChangeEvent } from "react";
 import * as S from "./styles";
 import useLanguage from "../../hooks/i18n";
 
-export const Header = () => {
+interface HeaderProps {
+  className?: string;
+}
+
+export const Header = ({ className }: HeaderProps) => {
   const {
     currentLanguage,
     availableLanguages,
@@ -17,7 +21,7 @@ export const Header = () => {
   };
 
   return (
-    <S.Header>
+    <S.Header className={className}>
       <S.MyName>João Golias</S.MyName>
       <S.Menu>
         <S.AboutMe>{t("labels.about-me")}</S.AboutMe>

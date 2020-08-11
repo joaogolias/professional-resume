@@ -2,7 +2,9 @@
   "en": {
     "translation": {
       "texts": {
-        "initial-greeting": "Hello, I am João Golias!"
+        "initial-greeting": "Hello, I am João Golias!",
+        "subtitle": "Full Stack Developer",
+        "enthusiastic": "Enthusiastic for programming, technology and education"
       },
       "labels": {
         "about-me": "about me",

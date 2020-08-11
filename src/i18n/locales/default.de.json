@@ -2,7 +2,9 @@
   "de": {
     "translation": {
       "texts": {
-        "initial-greeting": "Hallo, Ich bin João Golias!"
+        "initial-greeting": "Hallo, Ich bin João Golias!",
+        "subtitle": "Full Stack Softwareentwickler",
+        "enthusiastic": "Leidenschaft für Programmierung, Technologie und Bildung"
       },
       "labels": {
         "about-me": "über mich",

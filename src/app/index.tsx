@@ -5,6 +5,7 @@ function App() {
     <S.App>
       <S.HeaderContainer />
       <S.IntroductionContainer />
+      <S.KnowledgeContainer />
       {
         // Sobre mim - cv em pdf
         // Meus conhecimentos
