@@ -9,9 +9,9 @@ function App() {
       <S.JobExperienceContainer />
       <S.ProjectsContainer />
       <S.VolunteeringContainer />
+      <S.HireMeContainer />
       {
-        // Voluntariado
-        // Contrate-me
+        // Footer
       }
     </S.App>
   );

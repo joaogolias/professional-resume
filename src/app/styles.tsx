@@ -4,6 +4,7 @@ import Knowledge from "../containers/Knowledge";
 import JobExperience from "../containers/JobExperience";
 import Projects from "../containers/Projects";
 import Volunteering from "../containers/Volunteering";
+import HireMe from "../containers/HireMe";
 
 import styled from "styled-components";
 
@@ -34,5 +35,9 @@ export const JobExperienceContainer = styled(JobExperience)`
 export const ProjectsContainer = styled(Projects)``;
 
 export const VolunteeringContainer = styled(Volunteering)`
+  margin: 10px;
+`;
+
+export const HireMeContainer = styled(HireMe)`
   margin-top: 10px;
 `;
