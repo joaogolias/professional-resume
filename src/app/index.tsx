@@ -10,9 +10,7 @@ function App() {
       <S.ProjectsContainer />
       <S.VolunteeringContainer />
       <S.HireMeContainer />
-      {
-        // Footer
-      }
+      <S.FooterContainer />
     </S.App>
   );
 }

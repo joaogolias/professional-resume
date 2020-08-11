@@ -5,7 +5,7 @@ import JobExperience from "../containers/JobExperience";
 import Projects from "../containers/Projects";
 import Volunteering from "../containers/Volunteering";
 import HireMe from "../containers/HireMe";
-
+import Footer from "../containers/Footer";
 import styled from "styled-components";
 
 export const App = styled.div`
@@ -41,3 +41,5 @@ export const VolunteeringContainer = styled(Volunteering)`
 export const HireMeContainer = styled(HireMe)`
   margin-top: 10px;
 `;
+
+export const FooterContainer = styled(Footer)``;
