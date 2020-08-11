@@ -6,8 +6,8 @@ function App() {
       <S.HeaderContainer />
       <S.IntroductionContainer />
       <S.KnowledgeContainer />
+      <S.JobExperienceContainer />
       {
-        // Experiência
         // Voluntariado
         // Projetos
         // Contrate-me

@@ -1,6 +1,7 @@
 import Introduction from "../containers/Introduction";
 import Header from "../containers/Header";
 import Knowledge from "../containers/Knowledge";
+import JobExperience from "../containers/JobExperience";
 import styled from "styled-components";
 
 export const App = styled.div`
@@ -22,3 +23,5 @@ export const HeaderContainer = styled(Header)`
 export const KnowledgeContainer = styled(Knowledge)`
   margin-top: 10px;
 `;
+
+export const JobExperienceContainer = styled(JobExperience)``;
