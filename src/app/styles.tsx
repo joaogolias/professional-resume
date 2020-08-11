@@ -3,6 +3,7 @@ import Header from "../containers/Header";
 import Knowledge from "../containers/Knowledge";
 import JobExperience from "../containers/JobExperience";
 import Projects from "../containers/Projects";
+import Volunteering from "../containers/Volunteering";
 
 import styled from "styled-components";
 
@@ -26,6 +27,12 @@ export const KnowledgeContainer = styled(Knowledge)`
   margin-top: 10px;
 `;
 
-export const JobExperienceContainer = styled(JobExperience)``;
+export const JobExperienceContainer = styled(JobExperience)`
+  margin: 10px;
+`;
 
 export const ProjectsContainer = styled(Projects)``;
+
+export const VolunteeringContainer = styled(Volunteering)`
+  margin-top: 10px;
+`;

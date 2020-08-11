@@ -8,9 +8,9 @@ function App() {
       <S.KnowledgeContainer />
       <S.JobExperienceContainer />
       <S.ProjectsContainer />
+      <S.VolunteeringContainer />
       {
         // Voluntariado
-        // Projetos
         // Contrate-me
       }
     </S.App>

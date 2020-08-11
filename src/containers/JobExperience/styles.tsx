@@ -5,7 +5,6 @@ export const JobExperience = styled.div`
   display: flex;
   justify-content: center;
   height: 50vh;
-  margin: 10px;
   gap: 10px;
 `;
 

@@ -1,9 +1,9 @@
 import React from "react";
 import * as S from "./styles";
 
-export const Projects = () => {
+export const Projects = (props: ProjectsProps) => {
   return (
-    <S.Projects>
+    <S.Projects className={props.className}>
       <S.Title size="large" bold>
         Meus Projetos
       </S.Title>
@@ -17,5 +17,9 @@ export const Projects = () => {
     </S.Projects>
   );
 };
+
+interface ProjectsProps {
+  className?: string;
+}
 
 export default Projects;

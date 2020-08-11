@@ -1,9 +1,9 @@
 import React from "react";
 import * as S from "./styles";
 
-export const JobExperience = () => {
+export const JobExperience = (props: JobExperienceProps) => {
   return (
-    <S.JobExperience>
+    <S.JobExperience className={props.className}>
       <S.JobSections color="#024159" />
       <S.JobSections color="#025e73">
         <S.Title size="large" bold>
@@ -14,5 +14,9 @@ export const JobExperience = () => {
     </S.JobExperience>
   );
 };
+
+interface JobExperienceProps {
+  className?: string;
+}
 
 export default JobExperience;
